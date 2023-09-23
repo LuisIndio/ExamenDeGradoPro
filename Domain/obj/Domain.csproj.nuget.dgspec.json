@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {}
+  },
+  "projects": {
+    "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\LUIS INDIO\\.nuget\\packages\\",
+        "outputPath": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LUIS INDIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj": {
+                "projectPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj",
+        "projectName": "ShareKernel",
+        "projectPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj",
+        "packagesPath": "C:\\Users\\LUIS INDIO\\.nuget\\packages\\",
+        "outputPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LUIS INDIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
