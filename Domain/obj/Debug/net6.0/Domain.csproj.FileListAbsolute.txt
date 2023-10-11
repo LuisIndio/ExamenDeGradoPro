@@ -1,0 +1,17 @@
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\Domain.dll
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\Domain.pdb
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\ShareKernel.dll
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\ShareKernel.pdb
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.csproj.CopyComplete
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.dll
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.pdb
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache

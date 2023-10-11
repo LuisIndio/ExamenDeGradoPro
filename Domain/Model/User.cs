@@ -21,6 +21,7 @@ namespace Domain.Model
             Email = email;
             Password = password;
         }
+
         public void EditUser(string name, string email, string password)
         {
             Name = name;

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\UseCases",
+    "\\Application\\UseCases\\User",
+    "\\Application\\UseCases\\User\\Command",
+    "\\Application\\UseCases\\User\\Command\\RegisterUser",
+    "\\Domain",
+    "\\Domain\\Model",
+    "\\Infrastructure"
+  ],
+  "SelectedNode": "\\Infrastructure\\Extensions.cs",
+  "PreviewInSolutionExplorer": false
+}

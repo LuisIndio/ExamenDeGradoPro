@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {}
+    "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {
+    "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
+        "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\LUIS INDIO\\.nuget\\packages\\",
-        "outputPath": "D:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\obj\\",
+        "outputPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LUIS INDIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj": {
-                "projectPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj"
+              "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj": {
+                "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj"
               }
             }
           }
@@ -43,6 +43,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,18 +67,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj": {
+    "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj",
+        "projectUniqueName": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj",
         "projectName": "ShareKernel",
-        "projectPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\ShareKernel.csproj",
+        "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj",
         "packagesPath": "C:\\Users\\LUIS INDIO\\.nuget\\packages\\",
-        "outputPath": "D:\\DATOS LUISINDIO\\Downloads\\diplomado\\MicroservicioEstadia.netCore\\CheckIn\\obj\\",
+        "outputPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LUIS INDIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -120,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
