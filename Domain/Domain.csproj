@@ -17,6 +17,7 @@
     </PackageReference>
   </ItemGroup>
 
+
   <ItemGroup>
     
     <ProjectReference Include="..\ShareKernel\ShareKernel.csproj" />

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5mYKGSqDv+1hR3t6mmZO+1y8D+68XinFFd5uHSNqwpx+tneZITq+B2CpGrip0pr+pl3+tRVpwSvX7Vpk0Zznw==",
+  "dgSpecHash": "JT8ReLCOK6zfyWuS+TFtGx8kbTTCw1HgN0dT3Cq0DNXKrGvxGcNluQHdZ6Bk/36Bbl7ApTG0cEgP8AvdE4I4BA==",
   "success": true,
   "projectFilePath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

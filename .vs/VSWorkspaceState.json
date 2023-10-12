@@ -8,8 +8,9 @@
     "\\Application\\UseCases\\User\\Command\\RegisterUser",
     "\\Domain",
     "\\Domain\\Model",
+    "\\Domain\\Repositories",
     "\\Infrastructure"
   ],
-  "SelectedNode": "\\Infrastructure\\Extensions.cs",
+  "SelectedNode": "\\ExamenDeGradoPro.sln",
   "PreviewInSolutionExplorer": false
 }

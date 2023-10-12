@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "o2D4zvFPEhP9Js7JOOey2/DOePOl6+jdEd9AMQsV2+ikahZbAz0QcUzpdetbI45QwVWDJ6utVb+3aD9X8C9FRw==",
+  "dgSpecHash": "berWS8MNgbGLCAQFz9vslpNbpn6E+f1VXjRuLRcGQpbMdInv/YvF/59gwEh+p4S+hlowXDjUt8CLWX7O13kw+g==",
   "success": true,
   "projectFilePath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\LUIS INDIO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
