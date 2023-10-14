@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KQNsIm8t9nabK7CEIUbdSPBQylMgOZoLccrJMlPGIW0q8mXVAS3dY2FfhKvDkuorKNcaPez+fymj9Yn5/ion0g==",
+  "dgSpecHash": "kKv88i9TVlYI/lldUYEl4znRkIKZT4l0p62I/5j+gJrMHRSnnfeo6xeG5vafGlCDwgg9+IY+6NFUulOT8wH7bA==",
   "success": true,
   "projectFilePath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\LUIS INDIO\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

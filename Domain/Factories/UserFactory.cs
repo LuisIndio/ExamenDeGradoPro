@@ -21,7 +21,7 @@ namespace Domain.Factories
 
         public User RegisterUser(string username, string email, string password)
         {
-            throw new NotImplementedException();
+            return new User(email, username, password);
         }
     }
 }

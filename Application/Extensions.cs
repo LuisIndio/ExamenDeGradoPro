@@ -1,4 +1,6 @@
 ﻿using Domain.Factories;
+using Domain.Factories.Accounts;
+using Domain.Factories.Categories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,6 +19,8 @@ namespace Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddScoped<IUserFactory,UserFactory>();
+            services.AddScoped<IAccountFactory, AccountFactory>();
+            services.AddScoped<ICategoryFactory, CategoryFactory>();
             return services;
         }
     }

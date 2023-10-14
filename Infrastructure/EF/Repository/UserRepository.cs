@@ -12,12 +12,10 @@ namespace Infrastructure.EF.Repository
     internal class UserRepository : IUserRepository
     {
         private readonly WriteDbContext _writeDbContext;
-
         public UserRepository(WriteDbContext writeDbContext)
         {
             _writeDbContext = writeDbContext;
         }
-
         public async Task CreateAsync (User user)
         {
             await _writeDbContext.Users.AddAsync(user);

@@ -28,12 +28,16 @@ namespace Infrastructure
             {
                 options.UseSqlServer(configuration.GetConnectionString("WalletConnectionString"));
             });
+
             services.AddDbContext<WriteDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("WalletConnectionString"));
+                
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             return services;
         }
         public static bool Contains(this string source, string toCheck, StringComparison comp)

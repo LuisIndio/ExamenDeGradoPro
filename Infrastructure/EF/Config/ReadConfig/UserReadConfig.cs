@@ -16,12 +16,9 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.ToTable("User");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("userId");
-
             builder.Property(x => x.Name).HasColumnName("name");
             builder.Property(x => x.Email).HasColumnName("email");
             builder.Property(x => x.Password).HasColumnName("password");
-
-
 
         }
     }

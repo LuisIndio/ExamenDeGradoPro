@@ -23,10 +23,10 @@ namespace Application.UseCases.User.Command.RegisterUser
             _unitOfWork = unitOfWork;
         }
 
-
         public async Task<Guid> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
             var user = _userFactory.RegisterUser(request.Name, request.Email, request.Password);
+           
             await _userRepository.CreateAsync(user);
             await _unitOfWork.Commit();
             return user.Id;

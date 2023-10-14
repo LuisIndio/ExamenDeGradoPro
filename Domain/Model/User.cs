@@ -1,4 +1,5 @@
-﻿using ShareKernel.Core;
+﻿using Domain.events;
+using ShareKernel.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,6 @@ namespace Domain.Model
         public string Email { get; private set; }
         public string Password { get; private set; }
 
-       
         public User(string name, string email, string password)
         {
             Id = Guid.NewGuid();
@@ -28,6 +28,7 @@ namespace Domain.Model
             Email = email;
             Password = password;
         }
+       
 
         public User() { }
 

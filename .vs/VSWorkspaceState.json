@@ -3,14 +3,15 @@
     "",
     "\\Application",
     "\\Application\\UseCases",
-    "\\Application\\UseCases\\User",
-    "\\Application\\UseCases\\User\\Command",
-    "\\Application\\UseCases\\User\\Command\\RegisterUser",
+    "\\Application\\UseCases\\Account",
+    "\\Application\\UseCases\\Account\\Command",
+    "\\Application\\UseCases\\Account\\Command\\CreateAccount",
     "\\Domain",
     "\\Domain\\Model",
     "\\Domain\\Repositories",
-    "\\Infrastructure"
+    "\\Infrastructure",
+    "\\Web"
   ],
-  "SelectedNode": "\\ExamenDeGradoPro.sln",
+  "SelectedNode": "\\Web\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
