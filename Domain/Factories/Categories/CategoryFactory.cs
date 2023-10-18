@@ -9,9 +9,9 @@ namespace Domain.Factories.Categories
 {
     public class CategoryFactory : ICategoryFactory
     {
-        public Category CreateCategory(string name, string description)
+        public Category CreateCategory(Guid userId, string name, string description)
         {
-            return new Category(name, description);
+            return new Category(userId,name, description);
         }
     }
    

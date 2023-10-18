@@ -14,5 +14,7 @@ namespace Infrastructure.EF.ReadModel
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
+        public UserReadModel User { get; set; }
+        public Guid UserId { get; set; }
     }
 }

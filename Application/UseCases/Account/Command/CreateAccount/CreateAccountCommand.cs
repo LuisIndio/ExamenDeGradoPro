@@ -11,5 +11,11 @@ namespace Application.UseCases.Account.Command.CreateAccount
     {
         public string Name { get; set; }
         public string Balance { get; set; }
+
+        public CreateAccountCommand(string name, string balance)
+        {
+            Name = name;
+            Balance = balance;
+        }
     }
 }

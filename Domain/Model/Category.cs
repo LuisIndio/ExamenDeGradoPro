@@ -9,12 +9,14 @@ namespace Domain.Model
 {
     public class Category : AggregateRoot
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
+        public Guid UserId { get; private set; }
+        public string? Name { get; private set; }
+        public string? Description { get; private set; }
 
-        public Category(string name, string description)
+        public Category(Guid userId, string name, string description)
         {
             Id = Guid.NewGuid();
+            UserId = userId;
             Name = name;
             Description = description;
         }

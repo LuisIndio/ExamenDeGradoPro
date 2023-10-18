@@ -7,11 +7,12 @@
     "\\Application\\UseCases\\Account\\Command",
     "\\Application\\UseCases\\Account\\Command\\CreateAccount",
     "\\Domain",
+    "\\Domain\\Factories",
     "\\Domain\\Model",
     "\\Domain\\Repositories",
     "\\Infrastructure",
     "\\Web"
   ],
-  "SelectedNode": "\\Web\\Program.cs",
+  "SelectedNode": "\\Infrastructure\\Extensions.cs",
   "PreviewInSolutionExplorer": false
 }

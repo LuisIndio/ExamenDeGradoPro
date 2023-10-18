@@ -19,7 +19,7 @@ namespace Web.Controllers.Account
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
         [Route("create-account")]
-        public async Task<IActionResult> CreateAccount(CreateAccountCommand command)
+        public async Task<IActionResult> CreateAccount([FromBody] CreateAccountCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);

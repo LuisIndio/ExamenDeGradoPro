@@ -9,6 +9,6 @@ namespace Domain.Factories.Categories
 {
     public interface ICategoryFactory
     {
-        Category CreateCategory(string name, string description);
+        Category CreateCategory(Guid userId, string name, string description);
     }
 }

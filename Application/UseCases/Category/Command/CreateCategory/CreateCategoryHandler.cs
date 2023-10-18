@@ -24,7 +24,7 @@ namespace Application.UseCases.Category.Command.CreateCategory
         }
         public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var category = _categoryFactory.CreateCategory(request.Name, request.Description);
+            var category = _categoryFactory.CreateCategory(request.UserId ,request.Name, request.Description);
 
             await _categoryRepository.CreateAsync(category);
             await _unitOfWork.Commit();

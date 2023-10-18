@@ -9,8 +9,8 @@ namespace Domain.Model
 {
     public class Account : AggregateRoot
     {
-        public string Name { get; private set; }
-        public string Balance { get; private set; }
+        public string? Name { get; private set; }
+        public string? Balance { get; private set; }
 
         public Account(string name, string balance)
         {

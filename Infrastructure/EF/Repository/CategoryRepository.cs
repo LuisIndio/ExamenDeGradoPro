@@ -24,8 +24,8 @@ namespace Infrastructure.EF.Repository
 
         public async Task DeleteAsync(Guid categoryId)
         {
-            var account = _writeDbContext.Categories.Find(categoryId);
-            _writeDbContext.Remove(account);
+            var category = _writeDbContext.Categories.Find(categoryId);
+            _writeDbContext.Remove(category);
             await _writeDbContext.SaveChangesAsync();
         }
 

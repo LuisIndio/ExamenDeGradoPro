@@ -8,10 +8,17 @@ using System.Threading.Tasks;
 
 namespace Application.UseCases.User.Command.RegisterUser
 {
-    public class RegisterUserCommand : IRequest<Guid>
+    public record RegisterUserCommand : IRequest<Guid>
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+
+        public RegisterUserCommand(string name,string email,string password) 
+        {
+            Name = name;
+            Email = email;
+            Password = password;
+        }
     }
 }
