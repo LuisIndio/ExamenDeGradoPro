@@ -27,7 +27,7 @@ namespace Application.UseCases.User.Command.RegisterUser
         {
             var user = _userFactory.RegisterUser(request.Name, request.Email, request.Password);
             user.AddCategory(user.Id,"alimentos","esta categoria es para los alimentos");
-            //user.AddAccount("colchon","120");
+            user.AddAccount(user.Id,"colchon","120");
             await _userRepository.CreateAsync(user);
             await _unitOfWork.Commit();
             return user.Id;

@@ -9,12 +9,14 @@ namespace Domain.Model
 {
     public class Account : AggregateRoot
     {
+        public Guid UserId { get; private set; }
         public string? Name { get; private set; }
         public string? Balance { get; private set; }
 
-        public Account(string name, string balance)
+        public Account(Guid userId, string name, string balance)
         {
             Id = Guid.NewGuid();
+            UserId = userId;
             Name = name;
             Balance = balance;
         }

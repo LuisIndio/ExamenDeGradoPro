@@ -12,7 +12,6 @@ namespace Infrastructure.EF.Repository
     internal class CategoryRepository : ICategoryRepository
     {
         private readonly WriteDbContext _writeDbContext;
-
         public CategoryRepository(WriteDbContext writeDbContext)
         {
             _writeDbContext = writeDbContext;

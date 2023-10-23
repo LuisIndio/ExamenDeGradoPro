@@ -3,16 +3,16 @@
     "",
     "\\Application",
     "\\Application\\UseCases",
-    "\\Application\\UseCases\\Account",
-    "\\Application\\UseCases\\Account\\Command",
-    "\\Application\\UseCases\\Account\\Command\\CreateAccount",
-    "\\Domain",
-    "\\Domain\\Factories",
-    "\\Domain\\Model",
-    "\\Domain\\Repositories",
+    "\\Application\\UseCases\\User",
+    "\\Application\\UseCases\\User\\Command",
+    "\\Application\\UseCases\\User\\Command\\LoginUser",
     "\\Infrastructure",
-    "\\Web"
+    "\\Infrastructure\\EF",
+    "\\Infrastructure\\EF\\JWT",
+    "\\Web",
+    "\\Web\\Controllers",
+    "\\Web\\Controllers\\Transfer"
   ],
-  "SelectedNode": "\\Infrastructure\\Extensions.cs",
+  "SelectedNode": "\\Infrastructure\\EF\\JWT\\JwtService.cs",
   "PreviewInSolutionExplorer": false
 }

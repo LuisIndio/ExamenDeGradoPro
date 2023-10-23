@@ -1,6 +1,7 @@
 ﻿using Domain.Model;
 using Domain.Repositories;
 using Infrastructure.EF.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,11 @@ namespace Infrastructure.EF.Repository
         public Task<User?> FindByIdAsync(Guid id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<User> GetAsync(string email)
+        {
+            return await _writeDbContext.Users.Where(x => x.Email == email).FirstOrDefaultAsync();
         }
 
         public async Task UpdateAsync(User user)

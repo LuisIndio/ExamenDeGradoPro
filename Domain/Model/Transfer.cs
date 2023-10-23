@@ -13,14 +13,17 @@ namespace Domain.Model
         public decimal Amount { get; private set; }
         public Guid AccountId { get; private set; }
         public Guid AccountId2 { get; private set; }
+        public Guid UserId { get; private set; }
 
-        public Transfer(DateTime date, decimal amount, Guid accountId, Guid accountId2)
+        public Transfer(DateTime date, decimal amount, Guid accountId, Guid accountId2, Guid userId)
         {
             Id = Guid.NewGuid();
+            UserId = userId;
             Date = date;
             Amount = amount;
             AccountId = accountId;
             AccountId2 = accountId2;
+            UserId = userId;
         }
     }
 }

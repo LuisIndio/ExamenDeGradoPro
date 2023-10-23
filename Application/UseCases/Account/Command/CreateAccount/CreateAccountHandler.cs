@@ -25,7 +25,7 @@ namespace Application.UseCases.Account.Command.CreateAccount
 
         public async Task<Guid> Handle(CreateAccountCommand request, CancellationToken cancellationToken)
         {
-            var account = _accountFactory.CreateAccount(request.Name, request.Balance);
+            var account = _accountFactory.CreateAccount(request.UserId, request.Name, request.Balance);
 
             await _accountRepository.CreateAsync(account);
             await _unitOfWork.Commit();

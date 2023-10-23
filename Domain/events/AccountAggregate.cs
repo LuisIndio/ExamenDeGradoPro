@@ -9,11 +9,13 @@ namespace Domain.events
 {
     public record class AccountAggregate : DomainEvent
     {
+        public Guid UserId { get; private set; }
         public string Name { get; private set; }
         public string Balance { get; private set; }
 
-        public AccountAggregate(string name, string balance) : base(DateTime.Now)
+        public AccountAggregate(Guid userId,string name, string balance) : base(DateTime.Now)
         {
+            UserId = userId;
             Name= name;
             Balance = balance;
         }

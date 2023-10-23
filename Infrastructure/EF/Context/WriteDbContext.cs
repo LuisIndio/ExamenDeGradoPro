@@ -1,4 +1,5 @@
 ﻿using Domain.Model;
+using Domain.Model.Transaction;
 using Infrastructure.EF.Config.WriteConfig;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,6 +15,8 @@ namespace Infrastructure.EF.Context
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
+        public virtual DbSet<Transfer> Transfers { get; set; }
         public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options)
         {
         }
@@ -24,6 +27,8 @@ namespace Infrastructure.EF.Context
             modelBuilder.ApplyConfiguration<User>(new UserWriteConfig());
             modelBuilder.ApplyConfiguration<Account>(new AccountWriteConfig());
             modelBuilder.ApplyConfiguration<Category>(new CategoryWriteConfig());
+            modelBuilder.ApplyConfiguration<Transaction>(new TransactionWriteConfig());
+            modelBuilder.ApplyConfiguration<Transfer>(new TransferWriteConfig());
         }
     }
 }

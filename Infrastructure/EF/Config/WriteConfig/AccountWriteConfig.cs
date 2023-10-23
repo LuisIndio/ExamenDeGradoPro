@@ -17,6 +17,7 @@ namespace Infrastructure.EF.Config.WriteConfig
             builder.Property(x => x.Id).HasColumnName("accountId");
             builder.Property(x => x.Name).HasColumnName("name");
             builder.Property(x => x.Balance).HasColumnName("balance");
+            builder.Property(x => x.UserId).HasColumnName("userId");
 
             builder.Ignore(x => x.DomainEvents);
             builder.Ignore("_domainEvents");

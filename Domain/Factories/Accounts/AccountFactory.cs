@@ -9,9 +9,9 @@ namespace Domain.Factories.Accounts
 {
     public class AccountFactory : IAccountFactory
     {
-        public Account CreateAccount(string name, string balance)
+        public Account CreateAccount(Guid userId, string name, string balance)
         {
-            return new Account(name, balance);
+            return new Account(userId, name, balance);
         }
     }
 }

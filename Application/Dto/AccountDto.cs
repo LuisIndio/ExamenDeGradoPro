@@ -9,6 +9,7 @@ namespace Application.Dto
     public class AccountDto
     {
         public Guid Id { get; private set; }
+        public Guid UserId { get; private set; }
         public string Name { get; private set; }
         public string Balance { get; private set; }
 

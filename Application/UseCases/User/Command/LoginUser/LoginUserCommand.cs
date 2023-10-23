@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.UseCases.User.Command.LoginUser
 {
-    public class LoginUserCommand : IRequest<Guid>
+    public class LoginUserCommand : IRequest<string>
     {
         public string Email { get; set; }
         public string Password { get; set; }

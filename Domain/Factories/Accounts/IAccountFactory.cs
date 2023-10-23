@@ -9,6 +9,6 @@ namespace Domain.Factories.Accounts
 {
     public interface IAccountFactory
     {
-        Account CreateAccount(string name, string balance);
+        Account CreateAccount(Guid userId, string name, string balance);
     }
 }

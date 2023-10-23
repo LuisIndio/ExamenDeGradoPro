@@ -2,6 +2,7 @@
 using Domain.Repositories;
 using Infrastructure.EF;
 using Infrastructure.EF.Context;
+using Infrastructure.EF.JWT;
 using Infrastructure.EF.Repository;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,9 @@ namespace Infrastructure
             services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<ITransferRepository, TransferRepository>();
+            services.AddScoped<IJwtService, JwtService>();
             return services;
         }
         public static bool Contains(this string source, string toCheck, StringComparison comp)

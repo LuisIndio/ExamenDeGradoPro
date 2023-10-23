@@ -1,5 +1,7 @@
 ﻿using Domain.Factories;
+using Domain.Model;
 using Domain.Repositories;
+using Infrastructure.EF.JWT;
 using MediatR;
 using ShareKernel.Core;
 using System;
@@ -11,22 +13,32 @@ using System.Threading.Tasks;
 
 namespace Application.UseCases.User.Command.LoginUser
 {
-    internal class LoginUserHandler : IRequestHandler<LoginUserCommand, Guid>
+    public class LoginUserHandler : IRequestHandler<LoginUserCommand, string> // Cambia el tipo de retorno a string
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IUserFactory _userFact;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly AuthenticationService _authenticationService;
+        private readonly IJwtService _jwtService;
 
-        public LoginUserHandler(IUserRepository userRepository, IUnitOfWork unitOfWork,IUserFactory userFactory)
+        public LoginUserHandler(AuthenticationService authenticationService, IJwtService jwtService)
         {
-            _userRepository = userRepository;
-            _userFact = userFactory;
-            _unitOfWork = unitOfWork;
+            _authenticationService = authenticationService;
+            _jwtService = jwtService;
         }
 
-        public Task<Guid> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+        public Task<string> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var authenticatedUser = _authenticationService.AuthenticateUser(request.Email, request.Password);
+            Console.WriteLine("Authenticated User: " + authenticatedUser);
+            if (authenticatedUser == null)
+            {
+                // Si las credenciales son válidas, generas un token JWT utilizando IJwtService.
+                string token = _jwtService.GenerateToken(authenticatedUser);
+
+                // Devuelve el token como string.
+                return Task.FromResult(token);
+            }
+
+            // En caso de credenciales inválidas, puedes lanzar una excepción o devolver un valor predeterminado (por ejemplo, null).
+            return Task.FromResult("error al autenticar"); // Lanza una excepción o maneja el error según tus necesidades.
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Domain.Model
         private readonly ICollection<Category>? _categories;
         public IEnumerable<Category>? Categories => _categories;
 
-        //private readonly ICollection<Account>? _account;
-        //public IEnumerable<Account>? Accounts => _account;
+        private readonly ICollection<Account>? _account;
+        public IEnumerable<Account>? Accounts => _account;
 
         public string Name { get;  private set; }
         public string Email { get; private set; }
@@ -27,7 +27,7 @@ namespace Domain.Model
             Email = email;
             Password = password;
             _categories = new List<Category>();
-            //_account = new List<Account>();
+            _account = new List<Account>();
         }
        public void AddCategory(Guid userId, string name, string description)
         {
@@ -38,19 +38,18 @@ namespace Domain.Model
             AddDomainEvent(evento);
             //_categories.Add(category);
             //AddEvent(new CategoryAddedEvent(category));
-        }/*
-        public void AddAccount(string name, string balance)
+        }
+        public void AddAccount(Guid userId, string name, string balance)
         {
-            Account account = new Account(name, balance);
+            Account account = new Account(userId,name, balance);
             _account.Add(account);
 
-            var evento = new AccountAggregate(name, balance);
+            var evento = new AccountAggregate(userId, name, balance);
             AddDomainEvent(evento);
             //_categories.Add(category);
             //AddEvent(new CategoryAddedEvent(category));
-        }*/
+        }
         public User() { }
 
     }
-    
 }
