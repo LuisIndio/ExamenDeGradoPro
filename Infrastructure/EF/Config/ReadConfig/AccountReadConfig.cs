@@ -17,9 +17,9 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("accountId");
             builder.Property(x => x.Name).HasColumnName("name");
-            builder.Property(x => x.Balance).HasColumnName("balance");
+            builder.Property(x => x.Balance).HasColumnType("decimal").HasPrecision(20,2).HasColumnName("balance");
             builder.Property(x => x.UserId).HasColumnName("userId");
-            builder.HasOne(x => x.User).WithMany().HasForeignKey(x => x.UserId);
+
 
         }
     }

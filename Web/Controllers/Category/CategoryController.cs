@@ -1,4 +1,6 @@
 ﻿using Application.UseCases.Category.Command.CreateCategory;
+using Application.UseCases.Category.Command.Queries;
+using Application.UseCases.Transaction.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +24,18 @@ namespace Web.Controllers.Category
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryCommand command)
         {
             var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Route("search")]
+        [HttpGet]
+        public async Task<IActionResult> SearchCategory([FromQuery] Guid codigo)
+        {
+            var query = new GetListCategoriesQuery
+            {
+                UserId = codigo
+            };
+            var result = await _mediator.Send(query);
             return Ok(result);
         }
     }

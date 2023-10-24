@@ -21,7 +21,7 @@ namespace Infrastructure.EF.JWT
             // A continuación, se proporciona un ejemplo simple.
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("tu_secreto"); // Reemplaza esto con tu clave secreta real.
+            var key = Encoding.ASCII.GetBytes("eB8qp56iVgx3fVrPbvN6WnBS1cPzRY+cKbFsNzvFzS0="); // Reemplaza esto con tu clave secreta real.
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]

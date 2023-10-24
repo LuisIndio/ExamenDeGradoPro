@@ -11,9 +11,9 @@ namespace Application.UseCases.Account.Command.CreateAccount
     {
         public Guid UserId { get; set; }
         public string Name { get; set; }
-        public string Balance { get; set; }
+        public decimal Balance { get; set; }
 
-        public CreateAccountCommand(Guid userId, string name, string balance)
+        public CreateAccountCommand(Guid userId, string name, decimal balance)
         {
             UserId = userId;
             Name = name;

@@ -27,8 +27,8 @@ namespace Application.UseCases.User.Command.LoginUser
         public Task<string> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
             var authenticatedUser = _authenticationService.AuthenticateUser(request.Email, request.Password);
-            Console.WriteLine("Authenticated User: " + authenticatedUser);
-            if (authenticatedUser == null)
+            
+            if (authenticatedUser != null)
             {
                 // Si las credenciales son válidas, generas un token JWT utilizando IJwtService.
                 string token = _jwtService.GenerateToken(authenticatedUser);

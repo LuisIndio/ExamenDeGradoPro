@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj"
+              },
+              "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj": {
+                "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj"
               }
             }
           }
@@ -180,6 +183,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"

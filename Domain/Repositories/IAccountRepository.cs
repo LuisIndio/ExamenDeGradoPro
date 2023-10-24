@@ -13,5 +13,6 @@ namespace Domain.Repositories
         Task CreateAsync(Account account);
         Task UpdateAsync(Account account);
         Task DeleteAsync(Guid accountId);
+        Task<Account> GetAsync(Guid accountId);
     }
 }

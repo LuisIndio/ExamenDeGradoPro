@@ -11,9 +11,9 @@ namespace Domain.Model
     {
         public Guid UserId { get; private set; }
         public string? Name { get; private set; }
-        public string? Balance { get; private set; }
+        public decimal? Balance { get; private set; }
 
-        public Account(Guid userId, string name, string balance)
+        public Account(Guid userId, string name, decimal balance)
         {
             Id = Guid.NewGuid();
             UserId = userId;
@@ -21,11 +21,43 @@ namespace Domain.Model
             Balance = balance;
         }
 
-        public void EditAccount(string name, string balance)
+        public void EditAccount(string name, decimal balance)
         {
             Name = name;
             Balance = balance;
         }
+        public void IncreaseBalanceAccount(decimal balance)
+        {
+            Balance += balance;
+        }
+        public void ReduceBalanceAccount(decimal amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                throw new InvalidOperationException("Saldo insuficiente para realizar la reducción.");
+            }
+        }
+
+        public void IncreaseBalanceAccount2(decimal balance)
+        {
+            Balance += balance;
+        }
+        public void ReduceBalanceAccount2(decimal amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                throw new InvalidOperationException("Saldo insuficiente para realizar la reducción.");
+            }
+        }
+
         public Account() { }
 
     }

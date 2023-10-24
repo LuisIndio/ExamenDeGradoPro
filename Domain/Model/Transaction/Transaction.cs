@@ -1,4 +1,5 @@
-﻿using ShareKernel.Core;
+﻿using Domain.events;
+using ShareKernel.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace Domain.Model.Transaction
 
         public Transaction (string description, decimal amount, DateTime date, string type, Guid categoryId, Guid accountId, Guid userId)
         {
+            Id = Guid.NewGuid();
             Description = description;
             Amount = amount;
             Date = date;
@@ -26,7 +28,16 @@ namespace Domain.Model.Transaction
             CategoryId = categoryId;
             AccountId = accountId;
             UserId = userId;
+
+            var transactionCreatedEvent = new TransactionCreated(amount, date, type, accountId, userId, DateTime.Now);
+            AddDomainEvent(transactionCreatedEvent);
         }
+        public void DeleteTransaction(Guid id)
+        {
+            var transactionDeletedEvent = new TransactionDeleted(id, DateTime.Now);
+            AddDomainEvent(transactionDeletedEvent);
+        }
+        
 
         public Transaction() { }
     }

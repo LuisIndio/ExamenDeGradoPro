@@ -1,6 +1,7 @@
 ﻿using Domain.Model;
 using Domain.Repositories;
 using Infrastructure.EF.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,10 +34,15 @@ namespace Infrastructure.EF.Repository
             throw new NotImplementedException();
         }
 
-        public async Task UpdateAsync(Account account)
+        public async Task<Account> GetAsync(Guid accountId)
+        {
+            return await _writeDbContext.Accounts.FirstOrDefaultAsync(x => x.Id == accountId);
+        }
+
+        public Task UpdateAsync(Account account)
         {
             _writeDbContext.Accounts.Update(account);
-            await _writeDbContext.SaveChangesAsync();
+            return _writeDbContext.SaveChangesAsync();
         }
     }
 }

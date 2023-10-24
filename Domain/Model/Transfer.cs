@@ -1,4 +1,5 @@
-﻿using ShareKernel.Core;
+﻿using Domain.events;
+using ShareKernel.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,11 @@ namespace Domain.Model
             AccountId = accountId;
             AccountId2 = accountId2;
             UserId = userId;
+
+            var transferCreatedEvent = new TransferCreated(date, amount, accountId, accountId2, userId, DateTime.Now);
+            AddDomainEvent(transferCreatedEvent);
         }
+
+        public Transfer () { }
     }
 }

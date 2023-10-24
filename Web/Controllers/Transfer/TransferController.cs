@@ -1,4 +1,6 @@
-﻿using Application.UseCases.Transfer.Command.CreateTransfer;
+﻿using Application.UseCases.Transaction.Queries;
+using Application.UseCases.Transfer.Command.CreateTransfer;
+using Application.UseCases.Transfer.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +26,18 @@ namespace Web.Controllers.Transfer
         public async Task<IActionResult> CreateTransfer([FromBody] CreateTransferCommand command)
         {
             var result = await mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Route("search")]
+        [HttpGet]
+        public async Task<IActionResult> SearchTransfer([FromQuery] Guid codigo)
+        {
+            var query = new GetListTransferQuery
+            {
+                UserId = codigo
+            };
+            var result = await mediator.Send(query);
             return Ok(result);
         }
     }

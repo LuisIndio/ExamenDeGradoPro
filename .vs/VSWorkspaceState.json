@@ -3,9 +3,8 @@
     "",
     "\\Application",
     "\\Application\\UseCases",
-    "\\Application\\UseCases\\User",
-    "\\Application\\UseCases\\User\\Command",
-    "\\Application\\UseCases\\User\\Command\\LoginUser",
+    "\\Application\\UseCases\\EventHandlers",
+    "\\Application\\UseCases\\EventHandlers\\TransferEvents",
     "\\Infrastructure",
     "\\Infrastructure\\EF",
     "\\Infrastructure\\EF\\JWT",
@@ -13,6 +12,6 @@
     "\\Web\\Controllers",
     "\\Web\\Controllers\\Transfer"
   ],
-  "SelectedNode": "\\Infrastructure\\EF\\JWT\\JwtService.cs",
+  "SelectedNode": "\\Web\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

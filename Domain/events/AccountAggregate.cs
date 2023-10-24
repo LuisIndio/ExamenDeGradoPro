@@ -11,9 +11,9 @@ namespace Domain.events
     {
         public Guid UserId { get; private set; }
         public string Name { get; private set; }
-        public string Balance { get; private set; }
+        public decimal Balance { get; private set; }
 
-        public AccountAggregate(Guid userId,string name, string balance) : base(DateTime.Now)
+        public AccountAggregate(Guid userId,string name, decimal balance) : base(DateTime.Now)
         {
             UserId = userId;
             Name= name;

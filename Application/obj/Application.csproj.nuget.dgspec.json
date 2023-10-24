@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\Domain\\Domain.csproj"
+              },
+              "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj": {
+                "projectPath": "C:\\DATOS LUISINDIO\\Desktop\\web\\ExamenDeGradoPro\\ShareKernel\\ShareKernel.csproj"
               }
             }
           }

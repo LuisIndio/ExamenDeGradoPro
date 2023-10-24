@@ -1,6 +1,7 @@
 ﻿using Domain.Model.Transaction;
 using Domain.Repositories;
 using Infrastructure.EF.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,11 @@ namespace Infrastructure.EF.Repository
         public Task<Transaction?> FindByIdAsync(Guid id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Transaction> GetAsync(Guid transactionId)
+        {
+            return await _writeDbContext.Transactions.FirstOrDefaultAsync(x => x.Id == transactionId);
         }
 
         public async Task UpdateAsync(Transaction transaction)

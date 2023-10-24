@@ -9,6 +9,6 @@ namespace Domain.Factories.Transactions
 {
     public interface ITransactionFactory
     {
-        Transaction CreateTransaction(string description, decimal amount, DateTime date, string type, Guid categoryId, Guid accountId,Guid UserId);
+        Transaction CreateTransaction(string description, decimal amount, DateTime date, string type, Guid categoryId, Guid accountId, Guid userId);
     }
 }

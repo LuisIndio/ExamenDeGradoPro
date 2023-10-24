@@ -10,12 +10,6 @@ namespace Domain.Model
 {
     public class User : AggregateRoot
     {
-        private readonly ICollection<Category>? _categories;
-        public IEnumerable<Category>? Categories => _categories;
-
-        private readonly ICollection<Account>? _account;
-        public IEnumerable<Account>? Accounts => _account;
-
         public string Name { get;  private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
@@ -26,30 +20,29 @@ namespace Domain.Model
             Name = name;
             Email = email;
             Password = password;
-            _categories = new List<Category>();
-            _account = new List<Account>();
-        }
-       public void AddCategory(Guid userId, string name, string description)
-        {
-            var category = new Category(userId, name, description);
-            _categories.Add(category);
 
-            var evento= new CategoryAggregate(userId, name, description);
-            AddDomainEvent(evento);
-            //_categories.Add(category);
-            //AddEvent(new CategoryAddedEvent(category));
-        }
-        public void AddAccount(Guid userId, string name, string balance)
-        {
-            Account account = new Account(userId,name, balance);
-            _account.Add(account);
+            var userCreatedEvent = new UserCreated(this.Id,DateTime.Now);
+            AddDomainEvent(userCreatedEvent);
+            
 
-            var evento = new AccountAggregate(userId, name, balance);
-            AddDomainEvent(evento);
-            //_categories.Add(category);
-            //AddEvent(new CategoryAddedEvent(category));
         }
+
+        /*public void AddCategory(Guid userId, string name, string description)
+         {
+             var category = new Category(userId, name, description);
+             _categories.Add(category);
+
+             var evento= new CategoryAggregate(userId, name, description);
+             AddDomainEvent(evento);
+         }*/
+        /* public void AddAccount(Guid userId, string name, decimal balance)
+         {
+             Account account = new Account(userId,name, balance);
+             _account.Add(account);
+
+             var evento = new AccountAggregate(userId, name, balance);
+             AddDomainEvent(evento);
+         }*/
         public User() { }
-
     }
 }

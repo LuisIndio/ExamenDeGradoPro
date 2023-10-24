@@ -1,4 +1,5 @@
 ﻿using Application;
+using Domain.Model;
 using Domain.Repositories;
 using Infrastructure.EF;
 using Infrastructure.EF.Context;
@@ -42,6 +43,7 @@ namespace Infrastructure
             services.AddScoped<ITransactionRepository, TransactionRepository>();
             services.AddScoped<ITransferRepository, TransferRepository>();
             services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<AuthenticationService>();
             return services;
         }
         public static bool Contains(this string source, string toCheck, StringComparison comp)

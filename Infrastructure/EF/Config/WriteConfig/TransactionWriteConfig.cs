@@ -16,7 +16,7 @@ namespace Infrastructure.EF.Config.WriteConfig
            builder.ToTable("Transaction");
            builder.Property(x => x.Id).HasColumnName("transactionId");
            builder.Property(x => x.Description).HasColumnName("description");
-           builder.Property(x => x.Amount).HasColumnName("amount");
+           builder.Property(x => x.Amount).HasColumnType("decimal").HasPrecision(20, 2).HasColumnName("amount");
            builder.Property(x => x.Date).HasColumnName("date");
            builder.Property(x => x.Type).HasColumnName("type");
            builder.Property(x => x.CategoryId).HasColumnName("categoryId");

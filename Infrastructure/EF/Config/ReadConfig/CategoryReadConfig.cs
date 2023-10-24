@@ -19,7 +19,7 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.Property(x => x.Name).HasColumnName("name");
             builder.Property(x => x.Description).HasColumnName("description");
             builder.Property(x => x.UserId).HasColumnName("userId");
-            builder.HasOne(x => x.User).WithMany().HasForeignKey(x => x.UserId);
+            
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Application.UseCases.Account.Command.CreateAccount;
+using Application.UseCases.Account.Queries;
+using Application.UseCases.Transaction.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +24,30 @@ namespace Web.Controllers.Account
         public async Task<IActionResult> CreateAccount([FromBody] CreateAccountCommand command)
         {
             var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Route("search-balance-account")]
+        [HttpGet]
+        public async Task<IActionResult> SearchBalanceAccount([FromQuery] Guid codigo)
+        {
+            var query = new GetAmountForAllAccounts
+            {
+                UserId = codigo 
+            };
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [Route("search")]
+        [HttpGet]
+        public async Task<IActionResult> SearchAccount([FromQuery] Guid codigo)
+        {
+            var query = new GetListAccountQuery
+            {
+                UserId = codigo
+            };
+            var result = await _mediator.Send(query);
             return Ok(result);
         }
     }

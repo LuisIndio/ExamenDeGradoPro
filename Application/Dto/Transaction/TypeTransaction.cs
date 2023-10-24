@@ -8,7 +8,7 @@ namespace Application.Dto.Transaction
 {
     public enum TypeTransaction
     {
-        Ingreso,
-        Gasto
+        Ingreso = 1,
+        Gasto = 0
     }
 }

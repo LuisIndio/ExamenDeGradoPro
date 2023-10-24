@@ -9,7 +9,7 @@ namespace Domain.Factories.Accounts
 {
     public class AccountFactory : IAccountFactory
     {
-        public Account CreateAccount(Guid userId, string name, string balance)
+        public Account CreateAccount(Guid userId, string name, decimal balance)
         {
             return new Account(userId, name, balance);
         }

@@ -15,9 +15,11 @@ namespace Infrastructure.EF.Config.WriteConfig
         {
             builder.ToTable("Transfer");
             builder.Property(x => x.Id).HasColumnName("transferId");
-            builder.Property(x => x.Amount).HasColumnName("amount");
+            builder.Property(x => x.Amount).HasColumnType("decimal").HasPrecision(20, 2).HasColumnName("amount");
             builder.Property(x => x.AccountId).HasColumnName("accountId");
+            builder.HasOne<Account>().WithMany().HasForeignKey(x => x.AccountId);
             builder.Property(x => x.AccountId2).HasColumnName("accountId2");
+            builder.HasOne<Account>().WithMany().HasForeignKey(x => x.AccountId2);
             builder.Property(x => x.Date).HasColumnName("date");
             builder.Property(x => x.UserId).HasColumnName("userId");
 

@@ -15,7 +15,7 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.ToTable("Transfer");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("transferId");
-            builder.Property(x => x.Amount).HasColumnName("amount");
+            builder.Property(x => x.Amount).HasColumnType("decimal").HasPrecision(20, 2).HasColumnName("amount");
             builder.Property(x => x.AccountId).HasColumnName("accountId");
             builder.Property(x => x.AccountId2).HasColumnName("accountId2");
             builder.Property(x => x.Date).HasColumnName("date");

@@ -12,6 +12,7 @@ namespace Infrastructure.EF.ReadModel
         [Key]
         public Guid Id { get; set; }
         public Guid AccountId { get; set; }
+        public AccountReadModel Account { get; set; }
         public Guid AccountId2 { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }

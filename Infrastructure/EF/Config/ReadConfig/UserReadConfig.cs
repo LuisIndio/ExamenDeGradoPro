@@ -20,8 +20,6 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.Property(x => x.Email).HasColumnName("email");
             builder.Property(x => x.Password).HasColumnName("password");
 
-            
-
         }
     }
 }

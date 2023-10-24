@@ -13,6 +13,7 @@ namespace Domain.Repositories
         Task CreateAsync(Transaction transaction);
         Task UpdateAsync(Transaction transaction);
         Task DeleteAsync(Guid transactionId);
+        Task<Transaction> GetAsync(Guid transactionId);
         
     }
 }

@@ -17,7 +17,7 @@ namespace Infrastructure.EF.Config.ReadConfig
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("transactionId");
             builder.Property(x => x.Description).HasColumnName("description");
-            builder.Property(x => x.Amount).HasColumnName("amount");
+            builder.Property(x => x.Amount).HasColumnType("decimal").HasPrecision(20, 2).HasColumnName("amount");
             builder.Property(x => x.Date).HasColumnName("date");
             builder.Property(x => x.Type).HasColumnName("type");
 

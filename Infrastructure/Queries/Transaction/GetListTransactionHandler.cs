@@ -31,6 +31,7 @@ namespace Infrastructure.Queries.Transaction
             var lista = await query.Select(x => new TransactionDto
             {
                 Id = x.Id,
+                
                 Description = x.Description,
                 Amount = x.Amount,
                 Date = x.Date,

@@ -17,7 +17,9 @@ namespace Infrastructure.EF.Config.WriteConfig
             builder.Property(x => x.Id).HasColumnName("categoryId");
             builder.Property(x => x.Name).HasColumnName("name");
             builder.Property(x => x.Description).HasColumnName("description");
+
             builder.Property(x => x.UserId).HasColumnName("userId");
+            builder.HasOne<User>().WithMany().HasForeignKey(x => x.UserId);
 
             builder.Ignore(x => x.DomainEvents);
             builder.Ignore("_domainEvents");

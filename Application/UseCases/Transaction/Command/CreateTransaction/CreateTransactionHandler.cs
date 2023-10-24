@@ -25,10 +25,10 @@ namespace Application.UseCases.Transaction.Command.CreateTransaction
         public async Task<Guid> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
             var transaction = _transactionFactory.CreateTransaction(request.Description, request.Amount, request.Date, request.Type, request.CategoryId, request.AccountId, request.UserId);
+            //transaction.createtransaction(request.Description, request.Amount, request.Date, request.Type, request.CategoryId, request.AccountId, request.UserId);
             await _transactionRepository.CreateAsync(transaction);
             await _unitOfWork.Commit();
             return transaction.Id;
-
         }
     }
 }
