@@ -1,0 +1,5 @@
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Testing\obj\Debug\net6.0\Testing.csproj.AssemblyReference.cache
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Testing\obj\Debug\net6.0\Testing.GeneratedMSBuildEditorConfig.editorconfig
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Testing\obj\Debug\net6.0\Testing.AssemblyInfoInputs.cache
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Testing\obj\Debug\net6.0\Testing.AssemblyInfo.cs
+C:\DATOS LUISINDIO\Desktop\web\ExamenDeGradoPro\Testing\obj\Debug\net6.0\Testing.csproj.CoreCompileInputs.cache

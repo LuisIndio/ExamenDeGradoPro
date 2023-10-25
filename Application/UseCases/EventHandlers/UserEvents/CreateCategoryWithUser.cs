@@ -25,8 +25,13 @@ namespace Application.UseCases.EventHandlers.CategoryEvents
         {
 
             var Casa = _categoryFactory.CreateCategory(userId : notification.UserId, name : "Casa",description: "esta categoria es para los gastos de la casa");
+            var viajes = _categoryFactory.CreateCategory(userId: notification.UserId, name: "viajes", description: "esta categoria es para los viajes");
+            var entretenimiento = _categoryFactory.CreateCategory(userId: notification.UserId, name: "entretenimiento", description: "esta categoria es para los entretenimientos");
             await _categoryRepository.CreateAsync(Casa);
-            
+            await _categoryRepository.CreateAsync(viajes);
+            await _categoryRepository.CreateAsync(entretenimiento);
+
+
         }
     }
 }

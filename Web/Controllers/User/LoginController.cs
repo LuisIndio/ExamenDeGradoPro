@@ -32,7 +32,6 @@ namespace Web.Controllers.User
                 return Ok(new { Token = token });
             }
 
-            // El inicio de sesión falló, credenciales incorrectas.
             return Unauthorized();
         }
     }

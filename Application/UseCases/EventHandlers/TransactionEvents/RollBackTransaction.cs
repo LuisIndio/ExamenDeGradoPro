@@ -27,6 +27,7 @@ namespace Application.UseCases.EventHandlers.TransactionEvents
             {
                 throw new Exception("La transaccion no existe");
             }
+
             decimal amount = transactionDelete.Amount;
             string tipo = transactionDelete.Type;
 

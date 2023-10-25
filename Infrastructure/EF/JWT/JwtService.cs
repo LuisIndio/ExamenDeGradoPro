@@ -11,17 +11,13 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.EF.JWT
 {
-    // En la capa de Infraestructura (Infrastructure Layer)
     public class JwtService : IJwtService
     {
         public string GenerateToken(User user)
         {
-            // Implementa la lógica de generación de tokens JWT aquí.
-            // Deberás utilizar la configuración de seguridad adecuada.
-            // A continuación, se proporciona un ejemplo simple.
-
+           
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("eB8qp56iVgx3fVrPbvN6WnBS1cPzRY+cKbFsNzvFzS0="); // Reemplaza esto con tu clave secreta real.
+            var key = Encoding.ASCII.GetBytes("eB8qp56iVgx3fVrPbvN6WnBS1cPzRY+cKbFsNzvFzS0="); 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
@@ -29,7 +25,7 @@ namespace Infrastructure.EF.JWT
                 new Claim("userId", user.Id.ToString()),
                 new Claim("email", user.Email)
             }),
-                Expires = DateTime.UtcNow.AddHours(1), // Define la expiración del token
+                Expires = DateTime.UtcNow.AddHours(1), 
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

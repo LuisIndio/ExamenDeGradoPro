@@ -10,8 +10,9 @@
     "\\Infrastructure\\EF\\JWT",
     "\\Web",
     "\\Web\\Controllers",
+    "\\Web\\Controllers\\Category",
     "\\Web\\Controllers\\Transfer"
   ],
-  "SelectedNode": "\\Web\\appsettings.json",
+  "SelectedNode": "\\Web\\Controllers\\Category\\CategoryController.cs",
   "PreviewInSolutionExplorer": false
 }
