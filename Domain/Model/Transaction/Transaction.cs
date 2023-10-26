@@ -32,13 +32,12 @@ namespace Domain.Model.Transaction
             var transactionCreatedEvent = new TransactionCreated(amount, date, type, accountId, userId, DateTime.Now);
             AddDomainEvent(transactionCreatedEvent);
         }
-        public void DeleteTransaction(Guid id)
+        public void DeleteTransaction()
         {
-            var transactionDeletedEvent = new TransactionDeleted(id, DateTime.Now);
+            var transactionDeletedEvent = new TransactionDeleted(Type,Amount,AccountId,DateTime.Now);
             AddDomainEvent(transactionDeletedEvent);
         }
         
-
         public Transaction() { }
     }
 }

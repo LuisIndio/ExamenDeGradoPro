@@ -1,5 +1,7 @@
 ﻿using Application.Dto;
 using Application.UseCases.Account.Queries;
+using Domain.Factories.Accounts;
+using Domain.Repositories;
 using Infrastructure.EF.Context;
 using Infrastructure.EF.ReadModel;
 using MediatR;
@@ -15,7 +17,7 @@ namespace Infrastructure.Queries.Account
     internal class GetListAccountHandler : IRequestHandler<GetListAccountQuery, IEnumerable<AccountDto>>
     {
         private readonly DbSet<AccountReadModel>? accounts;
-
+        
         public GetListAccountHandler(ReadDbContext Context)
         {
             accounts = Context.Accounts;

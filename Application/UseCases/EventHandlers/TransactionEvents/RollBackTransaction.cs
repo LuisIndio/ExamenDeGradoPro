@@ -12,7 +12,6 @@ namespace Application.UseCases.EventHandlers.TransactionEvents
     public class RollBackTransaction : INotificationHandler<TransactionDeleted>
     {
         private readonly IAccountRepository _accountRepository;
-        private readonly ITransactionRepository _transactionRepository;
         
         public RollBackTransaction(IAccountRepository accountRepository)
         {
@@ -20,25 +19,16 @@ namespace Application.UseCases.EventHandlers.TransactionEvents
         }
 
         public async Task Handle(TransactionDeleted notification, CancellationToken cancellationToken)
-        {
-            var transactionDelete = await _transactionRepository.GetAsync(notification.Id);
+        {   
+            var account = await _accountRepository.GetAsync(notification.AccountId);
 
-            if (transactionDelete == null)
+            if (notification.Type == "ingreso")
             {
-                throw new Exception("La transaccion no existe");
+                account.ReduceBalanceAccount(notification.Amount);
             }
-
-            decimal amount = transactionDelete.Amount;
-            string tipo = transactionDelete.Type;
-
-            var account = await _accountRepository.GetAsync(transactionDelete.AccountId);
-            if (tipo == "ingreso")
+            else if (notification.Type == "egreso")
             {
-                account.ReduceBalanceAccount(amount);
-            }
-            else if (tipo == "egreso")
-            {
-                account.IncreaseBalanceAccount(amount);
+                account.IncreaseBalanceAccount(notification.Amount);
             }
 
             await _accountRepository.UpdateAsync(account);

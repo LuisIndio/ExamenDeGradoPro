@@ -9,11 +9,15 @@ namespace Domain.events
 {
     public record TransactionDeleted : DomainEvent
     {
-        public  Guid Id { get; set; }
+        public string Type { get; set; }
+        public decimal Amount { get; set; }
+        public Guid AccountId { get; set; }
 
-        public TransactionDeleted(Guid id, DateTime dateTime) : base(dateTime)
+        public TransactionDeleted(string type,decimal amount ,Guid accountId,DateTime dateTime) : base(dateTime)
         {
-            Id = id;
+            Type = type;
+            Amount = amount;
+            AccountId = accountId;
         }
     }
 }

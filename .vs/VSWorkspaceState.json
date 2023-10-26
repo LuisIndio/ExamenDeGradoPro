@@ -1,18 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Application",
-    "\\Application\\UseCases",
-    "\\Application\\UseCases\\EventHandlers",
-    "\\Application\\UseCases\\EventHandlers\\TransferEvents",
     "\\Infrastructure",
     "\\Infrastructure\\EF",
     "\\Infrastructure\\EF\\JWT",
+    "\\Testing",
+    "\\Testing\\Domain",
     "\\Web",
     "\\Web\\Controllers",
     "\\Web\\Controllers\\Category",
     "\\Web\\Controllers\\Transfer"
   ],
-  "SelectedNode": "\\Web\\Controllers\\Category\\CategoryController.cs",
+  "SelectedNode": "\\Testing\\Domain\\UserTest.cs",
   "PreviewInSolutionExplorer": false
 }

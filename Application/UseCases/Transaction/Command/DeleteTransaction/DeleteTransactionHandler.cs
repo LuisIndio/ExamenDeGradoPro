@@ -25,7 +25,7 @@ namespace Application.UseCases.Transaction.Command.DeleteTransaction
         public async Task<Guid> Handle(DeleteTransactionCommand request, CancellationToken cancellationToken)
         {
             var transaction = await _transactionRepository.GetAsync(request.TransactionId);
-            transaction.DeleteTransaction(transaction.Id);
+            transaction.DeleteTransaction();
 
             Guid transactionId = request.TransactionId;
             await _transactionRepository.DeleteAsync(transactionId);
