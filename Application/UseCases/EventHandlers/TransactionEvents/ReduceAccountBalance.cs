@@ -31,6 +31,7 @@ namespace Application.UseCases.EventHandlers.TransactionEvents
             {
                 cuenta.ReduceBalanceAccount(notification.Amount);
             }
+
             await _accountRepository.UpdateAsync(cuenta);
           
         }

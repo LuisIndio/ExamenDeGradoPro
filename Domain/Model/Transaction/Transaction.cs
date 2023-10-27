@@ -37,7 +37,18 @@ namespace Domain.Model.Transaction
             var transactionDeletedEvent = new TransactionDeleted(Type,Amount,AccountId,DateTime.Now);
             AddDomainEvent(transactionDeletedEvent);
         }
-        
+
+        public void UpdateTransaction(decimal different, Guid accountId,string type)
+        {
+            var transactionUpdatedEvent = new TransactionUpdate(Id, different, accountId,type,DateTime.Now);
+            AddDomainEvent(transactionUpdatedEvent);
+        }
+
+        public void EditAmount(decimal amount)
+        {
+            Amount = amount;
+        }
+
         public Transaction() { }
     }
 }

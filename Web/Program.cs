@@ -7,7 +7,7 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>
-        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
+        policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod())
 );
 
 builder.Services.AddControllers();

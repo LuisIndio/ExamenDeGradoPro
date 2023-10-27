@@ -25,8 +25,8 @@ namespace Infrastructure.EF.Repository
         public async Task DeleteAsync(Guid transactionId)
         {
             var transaction = _writeDbContext.Transactions.Find(transactionId);
-            _writeDbContext.Remove(transaction);
-            await _writeDbContext.SaveChangesAsync();
+            _writeDbContext.Transactions.Remove(transaction);
+            //await _writeDbContext.SaveChangesAsync();
         }
 
         public Task<Transaction?> FindByIdAsync(Guid id)
@@ -42,7 +42,7 @@ namespace Infrastructure.EF.Repository
         public async Task UpdateAsync(Transaction transaction)
         {
             _writeDbContext.Transactions.Update(transaction);
-            await _writeDbContext.SaveChangesAsync();
+            //await _writeDbContext.SaveChangesAsync();
         }
     }
 }

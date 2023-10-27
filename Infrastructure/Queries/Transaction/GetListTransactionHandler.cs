@@ -22,7 +22,7 @@ namespace Infrastructure.Queries.Transaction
         }
         public async Task<IEnumerable<TransactionDto>> Handle(GetListTransactionQuery request, CancellationToken cancellationToken)
         {
-            var query = transactions.AsNoTracking().AsQueryable();
+            var query = transactions.AsNoTracking().AsQueryable();  
 
             if (request.UserSearchIdList != Guid.Empty)
             {

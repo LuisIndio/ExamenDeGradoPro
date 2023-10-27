@@ -1,5 +1,6 @@
 ﻿using Application.UseCases.Transaction.Command.CreateTransaction;
 using Application.UseCases.Transaction.Command.DeleteTransaction;
+using Application.UseCases.Transaction.Command.UpdateTransaction;
 using Application.UseCases.Transaction.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -36,6 +37,18 @@ namespace Web.Controllers.Transaction
             var query = new GetListTransactionQuery
             {
                 UserSearchIdList = codigo 
+            };
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [Route("search-id")]
+        [HttpGet]
+        public async Task<IActionResult> SearchTransactionId([FromQuery] Guid transactionId)
+        {
+            var query = new GetListTransactionForId
+            {
+                TransactionId = transactionId
             };
             var result = await _mediator.Send(query);
             return Ok(result);
@@ -88,6 +101,14 @@ namespace Web.Controllers.Transaction
         [Route("delete-transaction")]
         [HttpDelete]
         public async Task<IActionResult> DeleteTransaction([FromBody] DeleteTransactionCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Route("update-transaction")]
+        [HttpPut]
+        public async Task<IActionResult> UpdateTransaction([FromBody] UpdateTransactionCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);

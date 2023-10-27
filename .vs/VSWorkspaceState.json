@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Infrastructure",
-    "\\Infrastructure\\EF",
-    "\\Infrastructure\\EF\\JWT",
-    "\\Testing",
-    "\\Testing\\Domain",
+    "\\Application",
+    "\\Application\\UseCases",
+    "\\Application\\UseCases\\EventHandlers",
+    "\\Application\\UseCases\\EventHandlers\\TransactionEvents",
     "\\Web",
     "\\Web\\Controllers",
     "\\Web\\Controllers\\Category",
+    "\\Web\\Controllers\\Transaction",
     "\\Web\\Controllers\\Transfer"
   ],
-  "SelectedNode": "\\Testing\\Domain\\UserTest.cs",
+  "SelectedNode": "\\Application\\UseCases\\EventHandlers\\TransactionEvents\\UpdateBalanceTransaction.cs",
   "PreviewInSolutionExplorer": false
 }
